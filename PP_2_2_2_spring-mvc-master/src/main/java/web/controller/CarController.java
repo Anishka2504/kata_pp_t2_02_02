@@ -31,7 +31,7 @@ public class CarController {
         return "cars";
     }
 
-    @GetMapping(value = "/cars?count={count}")
+    @GetMapping(value = "/cars/count={count}")
     public String getCountOfCars (ModelMap model, @PathVariable int count) {
         model.addAttribute("carList", count >= carList.size() ? carList : carList.subList(0, count));
         return "cars";
